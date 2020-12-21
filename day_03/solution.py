@@ -2,7 +2,7 @@ f = open("input.txt", "r")
 input_data = f.readlines()
 count = len(input_data)
 
-check_index = [(3*i % 31)+1 for i in range(1, count)]
+check_index = [(3*i % (len(input_data[1]) - 1))+1 for i in range(1, count)]
 
 result = 0
 for (index, line) in enumerate(input_data):
